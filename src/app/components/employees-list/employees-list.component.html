@@ -1,0 +1,55 @@
+<div class="container-fluid">
+<table class="table table-hover">
+    <thead>
+        <tr>
+        <th>
+            ID:
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            MAilId:
+        </th>
+        <th>
+            JobTitle:
+        </th>
+        <th>
+            Phone:
+        </th>
+        <th>
+            Image In Url:
+        </th>
+        <th>
+            Delete-Action
+        </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of storeemployees">
+            <td>
+                {{item.id}}
+            </td>
+            <td>
+                {{item.name}}
+            </td>
+            <td>
+                {{item.mailid}}
+            </td>
+            <td>
+                {{item.jobtitle}}
+            </td>
+            <td>
+                {{item.phone}}
+            </td>
+            <td>
+                <a href="{{item.imageurl}}" target="_blank" rel="noopener noreferrer"><img src="{{item.imageurl}}" alt="..." class="img-thumbnail" width="200px" height="200px"> </a>  
+            </td>
+            <td>
+                <button type="submit" (click)="deletestoreemployee(item.id)" class="btn-primary">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+    
+</table>
+</div>

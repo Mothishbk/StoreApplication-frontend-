@@ -1,0 +1,26 @@
+<div class="container">
+    <h3>Add-StoreEmployees</h3>
+    <form (ngSubmit)="onsubmit()" [formGroup] = "form">
+        <div class="form-group">
+            <label for="">Name:</label>
+            <input type="text" class="form-control" name="name" formControlName="name">
+        </div>
+        <div class="form-group">
+            <label for="">MailID:</label>
+            <input type="email" class="form-control" name="mailid" formControlName="mailid">
+        </div>
+        <div class="form-group">
+            <label for="">JobTitle:</label>
+            <input type="text" class="form-control" name="jobtitle" formControlName="jobtitle">
+        </div>
+        <div class="form-group">
+            <label for="">Phone:</label>
+            <input type="text" class="form-control" name="phone" formControlName="phone">
+        </div>
+        <div class="form-group">
+            <label for="">ImageURl:</label>
+            <input type="text" class="form-control" name="imageurl" formControlName="imageurl">
+        </div>
+        <button class="btn btn-success" type="submit">Add</button>
+    </form>
+</div>
